@@ -11,55 +11,65 @@
 <body>
     <nav>
         <p>68070230</p>
-        <h2>ITF---website</h2>
+        <h2>ITF website</h2>
         <p>week 14</p>
     </nav>
 
-        <img><br>
-        <h2>ITf Simple Bank</h2>
-        <p>welcome to my first HTML + CSS + Js website!</p>
-        <textarea>1,Current account balance</textarea>
     <div class="container">
-        <div>
-            <h2>Account Overview</h2>
-            <img><br>
-            <h3>account Information</h3>
-            <p>Name:Jatiya inkaew</p>
-            <p>Type:savings Account</p>
-            <img><br>
-            <h3>Balance Information</h3>
-            <label for="myinput">Current account balance:</label>
-            <input type = "number" id = "myinput" value = "0">
-            <br>
-            <label for="myinput">Current cash balance:</label>
-            <input type = "number" id = "myinput" value = "0">
-            <br>
-            <button type = "button" onclick="add()">Change</button>
-            <h3>Bank Operation</h3>
-            <img><br>
-            <select name="myDropdown" id="myDropdown">
-            <option value="deposit">Deposit</option>
-            <option value="withdraw">Withdraw</option>
-            </select>
-            <button type = "button" onclick="calc(this.innerText)">Proceed</button>
+        <div class = "header">
+            <img src="bank.png"><br>
+            <h2>ITf Simple Bank</h2>
+            <p>welcome to my first HTML + CSS + Js website!</p>
+            <section class = 'transaction'>
+                <textarea id='log' row="5">1,Current account balance</textarea>
+            </section>
         </div>
-        <div>
-            <h2>Financial Tools</h2>
-            <img><br>
-            <h3>Currency Conerter</h3>
-            <label for="myinput">Input balance:</label>
-            <input type = "number" id = "myinput" value = "0">
-            <br>
-            <label for="myinput">Output balance:</label>
-            <input type = "number" id = "myinput" value = "0">
-            <p></p>
-            <select name="myDropdown" id="myDropdown">
-            <option value="usd">USD</option>
-            <option value="thb">THB</option>
-            </select>
-            <button type = "button" onclick="calc(this.innerText)">Convert</button>
+
+        <div class="content">
+            <div>
+                <h2>Account Overview</h2>
+                <img src="lending.png"><br>
+                <h3>account Information</h3>
+                <p>Name:Jatiya inkaew</p>
+                <p>Type:savings Account</p>
+                <img src="passbook.png"><br>
+                <h3>Balance Information</h3>
+                <label for="acc_input">Current account balance:</label>
+                <input type="number" id="acc_input" value="0">
+                <br>
+                <label for="cash_input">Current cash balance:</label>
+                <input type="number" id="cash_input" value="0">
+                <br>
+                <button type="button" onclick="updateBalance()">Change</button>
+                <h3>Bank Operation</h3>
+                <img src="Wallet ios icon-Photoroom.png"><br>
+                <select name="myDropdown1" id="myDropdown1">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                </select>
+                <input type="number" id="proceed_input" value="0">
+                <button type="button" onclick="proceedOperation()">Proceed</button>
+            </div>
+
+            <div>
+                <h2>Financial Tools</h2>
+                <img src="Pic from _selfcarexpress-Photoroom.png"><br>
+                <h3>Currency Conerter</h3>
+                <label for="input-balance">Input balance:</label>
+                <input type="number" id="input-balance" value="0">
+                <br>
+                <label for="output-balance">Output balance:</label>
+                <input type="number" id="output-balance" value="0">
+                <p></p>
+                <select name="myDropdown2" id="myDropdown2">
+                    <option value="usd">USD</option>
+                    <option value="thb">THB</option>
+                </select>
+                <button type="button" onclick="convertCurrency()">Convert</button>
+            </div>
         </div>
     </div>
 </body>
-<script src = "script.js"></script>
+<script src="script.js"></script>
+
 </html>
