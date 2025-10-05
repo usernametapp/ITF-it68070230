@@ -105,11 +105,11 @@ body {
   }
 
   button {
-    background: #2563eb;
-    color: white;
+    background: #4f90c1;
+    color: rgb(236, 234, 95);
   }
   button:hover {
-    background: #1e40af;
+    background: rgb(29, 83, 119);
   }
 
   button.deposit {
